@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Career Compass</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7fafd;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .search-filter {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 60%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .blog-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      color: #2c7be5;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .no-results {
+      text-align: center;
+      font-size: 18px;
+      margin-top: 20px;
+      color: #888;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Career Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="resources.html">Resources</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="search-filter">
+      <input type="text" id="searchInput" placeholder="Search blog posts...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="resume">Resume Tips</option>
+        <option value="career">Career Advice</option>
+        <option value="stories">Inspiring Stories</option>
+      </select>
+    </div>
+
+    <div id="blogContainer" class="blog-cards">
+      <div class="card" data-category="resume">
+        <a href="blog-post1.html">
+          <h3>Top 10 Resume Mistakes to Avoid</h3>
+          <p>Craft the perfect resume by avoiding these common pitfalls.</p>
+        </a>
+      </div>
+      <div class="card" data-category="career">
+        <a href="blog-post2.html">
+          <h3>Best Career Choices in 2025</h3>
+          <p>Explore trending and promising careers for the near future.</p>
+        </a>
+      </div>
+      <div class="card" data-category="stories">
+        <a href="blog-post3.html">
+          <h3>From Failure to IAS: A Journey</h3>
+          <p>An inspiring tale of resilience, failure, and success.</p>
+        </a>
+      </div>
+    </div>
+    <div id="noResults" class="no-results" style="display: none;">No blog posts found.</div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Career Compass. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const blogCards = document.querySelectorAll('.card');
+    const noResults = document.getElementById('noResults');
+
+    function filterBlogs() {
+      const searchValue = searchInput.value.toLowerCase();
+      const categoryValue = categoryFilter.value;
+      let visibleCount = 0;
+
+      blogCards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        const category = card.getAttribute('data-category');
+
+        if ((text.includes(searchValue)) && (categoryValue === 'all' || category === categoryValue)) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterBlogs);
+    categoryFilter.addEventListener('change', filterBlogs);
+  </script>
+</body>
+
+</html>

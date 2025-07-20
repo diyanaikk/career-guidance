@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Career Compass</title>
+  
+  <!-- Link to Bootstrap CSS for styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  
+  <!-- AOS (Animate On Scroll) for animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7fafd;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 18px;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout for the main content */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+      flex-grow: 1;
+      padding-bottom: 20px;
+    }
+
+    /* Left side (team picture) */
+    .team-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Right side (team details) */
+    .contact-info {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .contact-info h2 {
+      color: #333;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p strong {
+      font-size: 20px;
+      color: #2c7be5;
+    }
+
+    /* Social Media Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: #333;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: #2c7be5;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1 data-aos="fade-up" data-aos-duration="1000">Contact Us - Career Compass</h1>
+    <div class="nav-links" data-aos="fade-down" data-aos-duration="1500">
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="resources.html">Resources</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- Contact Container -->
+  <div class="container my-5 contact-container">
+    <!-- Left Side: Team Picture -->
+    <div class="team-image-container" data-aos="fade-right" data-aos-duration="1500">
+      <img src="C:\Users\diyan\Downloads\contact.jpg" alt="Our Team" class="team-image" />
+    </div>
+
+    <!-- Right Side: Team Details -->
+    <div class="contact-info" data-aos="fade-left" data-aos-duration="1500">
+      <h2>Our Team</h2>
+
+      <!-- Team Member 1 -->
+      <p><strong>Mr. Arul Murugan K</strong></p>
+      <p>Phone: ‪+91 6360256127‬</p>
+      <p>Email: <a href="mailto:arul63014@gmail.com">arul63014@gmail.com</a></p>
+
+      <br>
+
+      <!-- Team Member 2 -->
+      <p><strong>Ms. Diya J Naik</strong></p>
+      <p>Phone: ‪+91 90719 50384‬</p>
+      <p>Email: <a href="mailto:diyanaik604@gmail.com">diyanaik604@gmail.com</a></p>
+
+      <br>
+
+      <!-- Team Member 3 -->
+      <p><strong>Ms. Vibha Binoy Sasidharan</strong></p>
+      <p>Phone: ‪+91 96068 65930‬</p>
+      <p>Email: <a href="mailto:vibhabinoysasidharan@gmail.com">vibhabinoysasidharan@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="social-links" data-aos="fade-up" data-aos-duration="1000">
+    <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Career Compass. All rights reserved.</p>
+  </footer>
+
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Include Bootstrap JS for animations and interactivity -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Include AOS (Animate On Scroll) Library for Animation Effects -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // Duration of animation in ms
+      offset: 100,  // Starts the animation when scrolled 100px into view
+    });
+  </script>
+
+</body>
+</html>

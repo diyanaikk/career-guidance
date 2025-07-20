@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Paths - Career Compass</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    header h1 {
+      color: white;
+      text-align: center;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+
+    header ul li {
+      margin: 0 15px;
+    }
+
+    header ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.2em;
+    }
+
+    .features h2 {
+      font-size: 2em;
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .feature-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 320px;
+      height: 300px;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-card h3 {
+      font-size: 1.5em;
+      color: #4CAF50;
+    }
+
+    .feature-card p {
+      color: #555;
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Career Compass</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quiz.html">Career Quiz</a></li>
+        <li><a href="careers.html">Career Paths</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Explore Various Career Paths</h2>
+      <p>We’ve got something for everyone – no matter your stream or passion!</p>
+    </section>
+
+    <section class="features">
+      <h2>Career Paths</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Doctor / Medicine</h3>
+          <p>Care for people's health, treat illnesses, and work in clinics or hospitals. Requires NEET exam in India.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Lawyer / Legal</h3>
+          <p>Uphold justice and solve disputes. Study law (LLB) after 12th via CLAT or other law entrance exams.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Chartered Accountant (CA)</h3>
+          <p>Manage company finances, audits and taxation. Commerce stream + CA exams through ICAI.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fashion Designer</h3>
+          <p>Create beautiful clothing and accessories. Design schools like NIFT and Pearl Academy offer programs.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Psychologist</h3>
+          <p>Understand human minds and emotions. Study BA/BSc Psychology and go for higher studies or practice.</p>
+        </div>
+        <div class="feature-card">
+          <h3>IAS / Civil Services</h3>
+          <p>Work in Indian government administration through UPSC exams. Open to all streams.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Chef / Culinary Arts</h3>
+          <p>Love food? Turn it into a career! Hotel management courses and culinary schools across India help you start.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Entrepreneur</h3>
+          <p>Start your own business! Any stream, but passion, strategy, and resilience are key.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Animator / Game Designer</h3>
+          <p>Bring characters and worlds to life through animation or gaming. Courses in design + software skills needed.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Engineer</h3>
+          <p>Design and build solutions in technology, construction, electronics and more. JEE Main/Advanced for top colleges.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Journalist</h3>
+          <p>Report news, write stories and inform the public. Study mass communication or journalism after 12th.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Government Jobs</h3>
+          <p>Banking, railways, SSC, PSU and more. Competitive exams open for many streams with stable career options.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Career Compass. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interest Test - Career Compass</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7fafd;
+      text-align: center;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .nav-links {
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 18px;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .questions-container {
+      margin-top: 40px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-button {
+      background-color: #2c7be5;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interest Test</h1>
+    <div class="nav-links">
+      <a href="quiz.html">Home</a>
+      <a href="aptitude-test.html">Aptitude Test</a>
+      <a href="interest-test.html">Interest Test</a>
+    </div>
+  </header>
+
+  <div class="questions-container">
+    <!-- Your 5 interest questions go here -->
+    <div class="question">
+      <p>1. Do you prefer working with data?</p>
+      <input type="radio" name="q1" value="1"> Yes
+      <input type="radio" name="q1" value="0"> No
+    </div>
+    <div class="question">
+      <p>2. Do you enjoy solving complex problems?</p>
+      <input type="radio" name="q2" value="1"> Yes
+      <input type="radio" name="q2" value="0"> No
+    </div>
+    <div class="question">
+      <p>3. Are you interested in design and creativity?</p>
+      <input type="radio" name="q3" value="1"> Yes
+      <input type="radio" name="q3" value="0"> No
+    </div>
+    <div class="question">
+      <p>4. Do you like working with technology?</p>
+      <input type="radio" name="q4" value="1"> Yes
+      <input type="radio" name="q4" value="0"> No
+    </div>
+    <div class="question">
+      <p>5. Are you passionate about helping others?</p>
+      <input type="radio" name="q5" value="1"> Yes
+      <input type="radio" name="q5" value="0"> No
+    </div>
+
+    <button class="quiz-button" onclick="calculateInterestScore()">Submit Interest Test</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Career Compass. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function calculateInterestScore() {
+  let interestScore = 0;
+
+  // Get selected answers
+  interestScore += parseInt(document.querySelector('input[name="q1"]:checked')?.value || 0);
+  interestScore += parseInt(document.querySelector('input[name="q2"]:checked')?.value || 0);
+  interestScore += parseInt(document.querySelector('input[name="q3"]:checked')?.value || 0);
+  interestScore += parseInt(document.querySelector('input[name="q4"]:checked')?.value || 0);
+  interestScore += parseInt(document.querySelector('input[name="q5"]:checked')?.value || 0);
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const aptitudeScore = parseInt(urlParams.get('score')) || 0;
+  const totalScore = aptitudeScore + interestScore;
+
+  // Mapping based on total score
+  let redirectPage = "";
+
+  if (totalScore >= 9) {
+    redirectPage = "btech.html"; // or datascience.html
+  } else if (totalScore >= 7) {
+    redirectPage = "mbbs.html"; // or bscnursing.html
+  } else if (totalScore >= 5) {
+    redirectPage = "bba.html"; // or bcom.html
+  } else if (totalScore >= 3) {
+    redirectPage = "journalism.html"; // or design.html
+  } else {
+    redirectPage = "ba.html"; // or bed.html
+  }
+
+  // Redirect user
+  window.location.href = redirectPage;
+}
+
+  </script>
+</body>
+</html>

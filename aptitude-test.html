@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aptitude Test - Career Compass</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7fafd;
+      text-align: center;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .nav-links {
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 18px;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .questions-container {
+      margin-top: 40px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-button {
+      background-color: #2c7be5;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aptitude Test</h1>
+    <div class="nav-links">
+      <a href="quiz.html">Home</a>
+      <a href="aptitude-test.html">Aptitude Test</a>
+      <a href="interest-test.html">Interest Test</a>
+    </div>
+  </header>
+
+  <!-- Replace the existing questions section in aptitude-test.html with this -->
+
+<div class="questions-container">
+    <div class="question">
+      <p>1. If the cost price of an item is ₹120 and the selling price is ₹150, what is the profit percentage?</p>
+      <input type="radio" name="q1" value="25"> 25%
+      <input type="radio" name="q1" value="30"> 30%
+      <input type="radio" name="q1" value="20"> 20%
+    </div>
+  
+    <div class="question">
+      <p>2. If a train travels 180 km in 2 hours and 30 minutes, what is its average speed in km/h?</p>
+      <input type="radio" name="q2" value="72"> 72
+      <input type="radio" name="q2" value="60"> 60
+      <input type="radio" name="q2" value="80"> 80
+    </div>
+  
+    <div class="question">
+      <p>3. A man can complete a task in 12 days. If he works with his friend, the task gets completed in 8 days. How long will his friend take to complete the work alone?</p>
+      <input type="radio" name="q3" value="24"> 24 days
+      <input type="radio" name="q3" value="20"> 20 days
+      <input type="radio" name="q3" value="18"> 18 days
+    </div>
+  
+    <div class="question">
+      <p>4. What comes next in the series: 2, 6, 12, 20, 30, ___?</p>
+      <input type="radio" name="q4" value="42"> 42
+      <input type="radio" name="q4" value="40"> 40
+      <input type="radio" name="q4" value="44"> 44
+    </div>
+  
+    <div class="question">
+      <p>5. If 3 pens cost ₹45 and 5 notebooks cost ₹75, what is the average cost of 1 pen and 1 notebook?</p>
+      <input type="radio" name="q5" value="25"> ₹25
+      <input type="radio" name="q5" value="20"> ₹20
+      <input type="radio" name="q5" value="15"> ₹15
+    </div>
+  
+    <button class="quiz-button" onclick="calculateAptitudeScore()">Submit Aptitude Test</button>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2025 Career Compass. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function calculateAptitudeScore() {
+      let score = 0;
+
+      // Get selected answers
+      if (document.querySelector('input[name="q1"]:checked').value == '25') score++;
+        if (document.querySelector('input[name="q2"]:checked').value == '72') score++;
+        if (document.querySelector('input[name="q3"]:checked').value == '24') score++;
+        if (document.querySelector('input[name="q4"]:checked').value == '42') score++;
+        if (document.querySelector('input[name="q5"]:checked').value == '20') score++;
+
+
+      // Redirect to Interest Test
+      window.location.href = "interest-test.html?score=" + score;
+    }
+  </script>
+</body>
+</html>
